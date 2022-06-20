@@ -1,12 +1,29 @@
 package com.kuebiko.kuebikofakebankacc.validation;
 
-import com.kuebiko.kuebikofakebankacc.modules.ProfileModules;
+import com.kuebiko.kuebikofakebankacc.models.ProfileModel;
 
 import java.util.Date;
 
 public class ProfileValidation {
 
-    public static String validateProfileData(ProfileModules profileModules) {
+    public static  String validateSsn(String ssn) {
+
+        if (ssn == null || ssn.length() == 0) {
+            return "ssn cannot be empty";
+        }
+        if (ssn.length() != 9) {
+            return "ssn is not valid !!! it has to be 9 digit";
+        }
+        try {
+            int ssnInt = Integer.parseInt(ssn);
+        } catch (Exception exception) {
+            return "ssn is not valid! please type numeric values";
+        }
+
+        return  null;
+    }
+
+    public static String validateProfileData(ProfileModel profileModules) {
 
         String firstName = profileModules.getFirstName();
         if (firstName == null || firstName.length() == 0) {
@@ -26,6 +43,8 @@ public class ProfileValidation {
         }
 
         String ssn = profileModules.getSsn();
+
+
         if (ssn == null || ssn.length() == 0) {
             return "ssn cannot be empty";
         }
@@ -37,6 +56,7 @@ public class ProfileValidation {
         } catch (Exception exception) {
             return "ssn is not valid! please type numeric values";
         }
+
         Date dateOfBirth = profileModules.getDateOfBirth();
         if (dateOfBirth == null) {
             return "Date Of birth cannot be empty";
@@ -52,7 +72,7 @@ public class ProfileValidation {
         if (gender == null) {
             return "gender cannot be empty";
         }
-        if (!gender.equals("m") || !gender.equals("f")) {
+        if (!gender.equals("m") && !gender.equals("f")) {
             return "gender can only be m or f";
         }
         return null;

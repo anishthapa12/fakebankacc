@@ -7,5 +7,5 @@ public interface ProfileDaoIf {
     public ProfileEntity save(ProfileEntity profileEntity);
 
 
-
+    ProfileEntity getBySsn(String ssn);
 }

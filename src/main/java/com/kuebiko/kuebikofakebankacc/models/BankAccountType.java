@@ -1,4 +1,4 @@
-package com.kuebiko.kuebikofakebankacc.modules;
+package com.kuebiko.kuebikofakebankacc.models;
 
 public enum BankAccountType {
 

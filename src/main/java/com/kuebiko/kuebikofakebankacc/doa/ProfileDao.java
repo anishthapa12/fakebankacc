@@ -18,4 +18,12 @@ public class ProfileDao implements ProfileDaoIf {
         return saveData;
 
     }
+
+    @Override
+    public ProfileEntity getBySsn(String ssn) {
+
+        return profileRepo.findByssn(ssn);
+
+
+    }
 }

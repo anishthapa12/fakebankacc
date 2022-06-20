@@ -1,12 +1,12 @@
 package com.kuebiko.kuebikofakebankacc.mappers;
 
 import com.kuebiko.kuebikofakebankacc.entity.ProfileEntity;
-import com.kuebiko.kuebikofakebankacc.modules.ProfileModules;
+import com.kuebiko.kuebikofakebankacc.models.ProfileModel;
 
 public class ProfileMapper {
 
 
-    public static ProfileEntity map(ProfileModules profileModules) {
+    public static ProfileEntity map(ProfileModel profileModules) {
         ProfileEntity profileEntity = new ProfileEntity();
         profileEntity.setFirstName(profileEntity.getFirstName());
         profileEntity.setMiddleName(profileEntity.getMiddleName());
@@ -21,8 +21,8 @@ public class ProfileMapper {
 
         return profileEntity;
     }
-    public static ProfileModules map(ProfileEntity profileModules) {
-        ProfileModules profileModule = new ProfileModules();
+    public static ProfileModel map(ProfileEntity profileModules) {
+        ProfileModel profileModule = new ProfileModel();
         profileModule.setFirstName(profileModules.getFirstName());
         profileModule.setMiddleName(profileModules.getMiddleName());
         profileModule.setLastName(profileModules.getLastName());

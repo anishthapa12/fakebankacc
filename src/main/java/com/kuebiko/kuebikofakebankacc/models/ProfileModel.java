@@ -1,8 +1,8 @@
-package com.kuebiko.kuebikofakebankacc.modules;
+package com.kuebiko.kuebikofakebankacc.models;
 
 import java.util.Date;
 
-public class ProfileModules {
+public class ProfileModel {
 
     private long id;
 

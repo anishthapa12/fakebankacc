@@ -1,6 +1,6 @@
-package com.kuebiko.kuebikofakebankacc.modules;
+package com.kuebiko.kuebikofakebankacc.models;
 
-public class BankAccountModules {
+public class BankAccountModel {
 
     private long accountNumber;
     private long routingNumber;
