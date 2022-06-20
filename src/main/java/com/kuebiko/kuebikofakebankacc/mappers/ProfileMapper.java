@@ -6,33 +6,33 @@ import com.kuebiko.kuebikofakebankacc.models.ProfileModel;
 public class ProfileMapper {
 
 
-    public static ProfileEntity map(ProfileModel profileModules) {
+    public static ProfileEntity map(ProfileModel pm) {
         ProfileEntity profileEntity = new ProfileEntity();
-        profileEntity.setFirstName(profileEntity.getFirstName());
-        profileEntity.setMiddleName(profileEntity.getMiddleName());
-        profileEntity.setLastName(profileEntity.getLastName());
-        profileEntity.setAddress(profileEntity.getAddress());
-        profileEntity.setDateOfBirth(profileEntity.getDateOfBirth());
-        profileEntity.setEmail(profileEntity.getEmail());
-        profileEntity.setPhoneNumber(profileEntity.getPhoneNumber());
-        profileEntity.setSsn(profileEntity.getSsn());
-        profileEntity.setGender(profileEntity.getGender());
-        profileEntity.setId(profileEntity.getId());
+        profileEntity.setFirstName(pm.getFirstName());
+        profileEntity.setMiddleName(pm.getMiddleName());
+        profileEntity.setLastName(pm.getLastName());
+        profileEntity.setAddress(pm.getAddress());
+        profileEntity.setDateOfBirth(pm.getDateOfBirth());
+        profileEntity.setEmail(pm.getEmail());
+        profileEntity.setPhoneNumber(pm.getPhoneNumber());
+        profileEntity.setSsn(pm.getSsn());
+        profileEntity.setGender(pm.getGender());
+        profileEntity.setId(pm.getId());
 
         return profileEntity;
     }
-    public static ProfileModel map(ProfileEntity profileModules) {
+    public static ProfileModel map(ProfileEntity pe) {
         ProfileModel profileModule = new ProfileModel();
-        profileModule.setFirstName(profileModules.getFirstName());
-        profileModule.setMiddleName(profileModules.getMiddleName());
-        profileModule.setLastName(profileModules.getLastName());
-        profileModule.setAddress(profileModules.getAddress());
-        profileModule.setDateOfBirth(profileModules.getDateOfBirth());
-        profileModule.setEmail(profileModules.getEmail());
-        profileModule.setPhoneNumber(profileModules.getPhoneNumber());
-        profileModule.setSsn(profileModules.getSsn());
-        profileModule.setGender(profileModules.getGender());
-        profileModule.setId(profileModules.getId());
+        profileModule.setFirstName(pe.getFirstName());
+        profileModule.setMiddleName(pe.getMiddleName());
+        profileModule.setLastName(pe.getLastName());
+        profileModule.setAddress(pe.getAddress());
+        profileModule.setDateOfBirth(pe.getDateOfBirth());
+        profileModule.setEmail(pe.getEmail());
+        profileModule.setPhoneNumber(pe.getPhoneNumber());
+        profileModule.setSsn(pe.getSsn());
+        profileModule.setGender(pe.getGender());
+        profileModule.setId(pe.getId());
 
         return profileModule;
 
